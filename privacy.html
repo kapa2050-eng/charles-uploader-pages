@@ -1,29 +1,17 @@
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0B0E17;--card:#141926;--line:#242C3F;--fg:#E9EDF6;--mid:#9AA4BF;--mint:#00D68F}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--fg);font-family:"Gothic A1",-apple-system,sans-serif;
-  line-height:1.8;padding:48px 22px}
-.w{max-width:760px;margin:0 auto}
-a{color:var(--mint)}
-h1{font-size:30px;font-weight:900;margin-bottom:8px;letter-spacing:-.02em}
-h2{font-size:19px;font-weight:800;margin:34px 0 10px;color:var(--fg)}
-p,li{color:var(--mid);font-size:15px}
-ul{margin:10px 0 0 20px}li{margin-bottom:6px}
-.sub{color:var(--mid);font-size:15px;margin-bottom:6px}
-.date{color:#5F6982;font-size:13px;font-family:monospace;margin-bottom:34px}
-.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin:20px 0}
-.box code{color:var(--mint);font-size:13.5px;word-break:break-all}
-nav{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:14px}
-nav a{margin-right:18px}
-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
-th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);color:var(--mid)}
-th{color:var(--fg);font-weight:700}
-.en{margin-top:40px;padding-top:26px;border-top:1px solid var(--line)}
-.en p,.en li{font-size:14px}
-</style>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0B0E17">
+<meta name="description" content="친절한찰스업로더 개인정보처리방침">
 <title>개인정보처리방침 · 친절한찰스업로더</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
 <div class="w">
 <h1>개인정보처리방침</h1>
 <p class="sub">친절한찰스업로더</p>
@@ -31,12 +19,12 @@ th{color:var(--fg);font-weight:700}
 
 <h2>1. 요청하는 구글 권한</h2>
 <p>이 앱은 아래 세 가지 권한만 요청합니다. 그 밖의 권한은 요청하지 않습니다.</p>
-<table>
+<div class="table"><table>
 <tr><th>범위</th><th>쓰는 이유</th></tr>
 <tr><td><code>.../auth/youtube.upload</code></td><td>승인받은 채널에 영상을 올리기 위해</td></tr>
 <tr><td><code>.../auth/youtube.readonly</code></td><td>어느 채널에 올리는지 확인하고, 올린 영상의 조회수·좋아요·댓글 수를 읽기 위해</td></tr>
 <tr><td><code>.../auth/youtube</code></td><td>비공개로 올린 영상을 유튜브 심사 뒤 공개로 바꾸기 위해</td></tr>
-</table>
+</table></div>
 
 <h2>2. 다루는 정보</h2>
 <ul>
@@ -84,10 +72,10 @@ th{color:var(--fg);font-weight:700}
 <p>친절한찰스업로더 is a personal tool used by a delegated manager to upload short-form videos
 to YouTube channels with the channel owner's explicit consent.</p>
 <ul>
-<li><b>Scopes requested:</b> <code>youtube.upload</code> (to upload videos) and
+<li><b>Scopes requested (three only):</b> <code>youtube.upload</code> (to upload videos),
 <code>youtube.readonly</code> (to identify the target channel and read view/like/comment counts
-of videos uploaded by this tool), and youtube (to switch a reviewed private upload to public).</li>
-<li><b>Data handled:</b> channel ID and title, public metrics of uploaded videos, and the OAuth
+of videos uploaded by this tool), and <code>youtube</code> (to switch a reviewed private upload to public).</li>
+<li><b>Data handled:</b> channel ID, title and profile/banner image URLs, public metrics of uploaded videos, and the OAuth
 refresh token.</li>
 <li><b>Storage:</b> stored only on the operator's local computer. There is no server. Token files
 are permission-restricted to the owner.</li>
@@ -101,5 +89,11 @@ including the Limited Use requirements.</li>
 <p>Contact: kapa2050@naver.com</p>
 </div>
 
-<nav><a href="./">홈</a><a href="./terms.html">서비스 약관</a></nav>
+<nav>
+<a href="./">홈</a>
+<a href="./privacy.html" aria-current="page">개인정보처리방침</a>
+<a href="./terms.html">서비스 약관</a>
+</nav>
 </div>
+</body>
+</html>
